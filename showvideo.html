@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_32.png"
+      sizes="32x32"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <title>Youtube</title>
+  </head>
+  <body>
+    <!--NAVBAR -->
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <!-- LEFT SIDE LOGO -->
+      <div class="side_menu">
+        <div class="logo__">
+          <div class="bar" onclick="sidemenusmall()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="logo">
+            <a href="index.html"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!--RIGHT SIDE NAVBAR ICONS AND SEARCH -->
+      <header>
+        <nav>
+          <div class="left">
+            <div class="hamburger-menu-icon" onclick="sidemenusmall()">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+              <a href="index.html"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
+              /></a>
+            </div>
+          </div>
+          <div class="center">
+            <div class="search">
+              <div class="previous">
+                <i class="fa fa-arrow-left"></i>
+              </div>
+              <input
+                type="text"
+                id="video_search"
+                placeholder="search here..."
+              />
+              <button
+                type="submit"
+                onclick="SearchVideo__from_watch('searchlist')"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="right">
+            <div class="container__">
+              <ul class="nav-links">
+                <li>
+                  <i class="fas fa-video"></i>
+                </li>
+                <li>
+                  <i class="fas fa-th"></i>
+                </li>
+                <li>
+                  <i class="fas fa-bell"></i>
+                </li>
+              </ul>
+              <div class="profile">
+                <img src="./assets/images/photo.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="watchVideo">
+      <div class="mainVideo">
+        <!--VIDEO WATCH -->
+        <div class="video">
+          <iframe
+            width="100%"
+            height="480"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <p id="title"></p>
+          <div class="details_video">
+            <div id="viewsBig_video"></div>
+            <div class="video_likes">
+              <div>
+                <span class="material-icons-outlined"> thumb_up </span>
+                <span>like</span>
+              </div>
+              <div>
+                <span class="material-icons-outlined"> thumb_down </span>
+                <span>dislike</span>
+              </div>
+              <div>
+                <span class="material-icons-outlined reply_swap"> reply </span>
+                <span>share</span>
+              </div>
+              <div>
+                <span class="material-icons-outlined"> playlist_add </span>
+                <span>save</span>
+              </div>
+              <div>
+                <span class="material-icons"> more_horiz </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--DETAILS OF THAT VIDEEOS-->
+        <div class="channelDetails">
+          <div>
+            <img id="bigVideo__profile" />
+            <div>
+              <p class="bigVideo__title"></p>
+              <p class="bigVideo__Des"></p>
+              <button id="btn_t" onclick="show_des()">SHOW MORE</button>
+            </div>
+          </div>
+          <div class="subscribe">SubScribe</div>
+        </div>
+        <!--COMMENTS-->
+        <div>
+          <p>Comments</p>
+          <div class="comments">
+            <img src="./assets/images/photo.jpg" class="avtar" />
+            <input type="text" placeholder="Add a public comment..." />
+          </div>
+        </div>
+      </div>
+
+      <!--RELATED VIDEOS -->
+      <div class="relatedVideo">
+        <div class="filter_container">
+          <div>All</div>
+          <div>Mixes</div>
+          <div>Comedies</div>
+          <div>Music</div>
+          <div class="remove_small_screen">Website</div>
+          <div class="remove_small_screen">HTML</div>
+          <div class="remove_small_screen">CSS</div>
+          <div class="remove_small_screen">Stock markets</div>
+          <div class="remove_small_screen">JavaScript</div>
+          <div class="remove_small_screen">Cartoon</div>
+          <div class="remove_small_screen">Moive</div>
+        </div>
+        <div class="recommend"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/showvideo.js"></script>
+<script src="./scripts/index.js"></script>

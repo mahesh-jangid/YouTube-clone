@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CF9FSS19YT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-CF9FSS19YT");
+    </script>
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_32.png"
+      sizes="32x32"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <title>Youtube</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <!-- LEFT SIDE LOGO -->
+      <div class="side_menu">
+        <div class="logo__">
+          <div class="bar" onclick="sidemenusmall()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="logo">
+            <a href="index.html"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!--RIGHT SIDE NAVBAR ICONS AND SEARCH -->
+      <header>
+        <nav>
+          <div class="left">
+            <div class="hamburger-menu-icon" onclick="sidemenusmall()">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+              <a href="index.html"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
+              /></a>
+            </div>
+          </div>
+          <div class="center">
+            <div class="search">
+              <div class="previous">
+                <i class="fa fa-arrow-left"></i>
+              </div>
+              <input
+                type="text"
+                id="video_search"
+                placeholder="search here..."
+              />
+              <button type="submit" onclick="SearchVideo('searchlist')">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="right">
+            <div class="container__">
+              <ul class="nav-links">
+                <li>
+                  <i class="fas fa-video"></i>
+                </li>
+                <li>
+                  <i class="fas fa-th"></i>
+                </li>
+                <li>
+                  <i class="fas fa-bell"></i>
+                </li>
+              </ul>
+              <div class="profile">
+                <img src="./assets/images/photo.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="container">
+      <!--SIDE MENU BAR NAVBAR -->
+      <div class="menu__container">
+        <div>
+          <div class="menu__items active">
+            <span> <i class="fa fa-home"></i> </span>
+            <span>Home</span>
+          </div>
+          <div class="menu__items">
+            <span class="material-icons-outlined">
+              <i class="fas fa-fire"></i
+            ></span>
+            <span>Explore</span>
+          </div>
+          <div class="menu__items">
+            <span class="material-icons-outlined">
+              <i class="fab fa-youtube-square"></i>
+            </span>
+
+            <span>Subscription</span>
+          </div>
+          <div class="divider"><span></span></div>
+          <div class="menu__items">
+            <span class="material-icons-outlined">
+              <i class="fas fa-photo-video"></i>
+            </span>
+            <span>Library</span>
+          </div>
+          <div class="menu__items">
+            <span class="material-icons-outlined">
+              <i class="fa fa-history"></i>
+            </span>
+            <span>History</span>
+          </div>
+          <div class="menu__items small_width_remove">
+            <span class="material-icons-outlined">
+              <i class="fa fa-play-circle"></i>
+            </span>
+
+            <span>Your videos</span>
+          </div>
+          <div class="menu__items small_width_remove">
+            <span class="material-icons-outlined">
+              <i class="fas fa-clock"></i>
+            </span>
+            <span>Watch later</span>
+          </div>
+          <div class="menu__items small_width_remove">
+            <span class="material-icons-outlined">
+              <i class="fa fa-thumbs-up"></i>
+            </span>
+            <span>Liked videos</span>
+          </div>
+          <div class="subscriptions-links small_width_remove">
+            <div class="heading-title">SUBSCRIPTIONS</div>
+            <ul>
+              <li>
+                <div class="channel-logo">
+                  <img
+                    src="https://yt3.ggpht.com/a-/AOh14GhqOT2rmcUlS-pOBQeg8m4GCYTXT87VKNoyyg=s68-c-k-c0x00ffffff-no-rj-mo"
+                    alt=""
+                  />
+                </div>
+                <div class="item-title live">
+                  <span>Dev Ed</span>
+                  <i class="fa fa-podcast"></i>
+                </div>
+              </li>
+              <li>
+                <div class="channel-logo">
+                  <img
+                    src="https://yt3.ggpht.com/a/AATXAJywsr1EqZJfqSRVM9kmx7thihwsNJBNRarA-h1xZQ=s88-c-k-c0xffffffff-no-rj-mo"
+                    alt=""
+                  />
+                </div>
+                <div class="item-title live">
+                  <span>Study With Flow</span>
+                  <i class="fa fa-podcast"></i>
+                </div>
+              </li>
+
+              <li>
+                <div class="channel-logo">
+                  <img
+                    src="https://yt3.ggpht.com/a/AATXAJwtjRbBRxYOFs8UigC1pYDGV0JhJqE2CuYTOaCWpA=s88-c-k-c0xffffffff-no-rj-mo"
+                    alt=""
+                  />
+                </div>
+                <div class="item-title newness-dot">
+                  <span>BBC Earth</span>
+                  <i class="fa fa-podcast"></i>
+                </div>
+              </li>
+              <li>
+                <div class="channel-logo">
+                  <img
+                    src="https://yt3.ggpht.com/a/AATXAJxSkEEZNYYB9FAy6JfZ7gRvvte0qlP5Tm58AU01yA=s88-c-k-c0xffffffff-no-rj-mo"
+                    alt=""
+                  />
+                </div>
+                <div class="item-title">
+                  <span>Google Developers</span>
+                </div>
+              </li>
+              <li>
+                <div class="channel-logo">
+                  <img
+                    src="https://yt3.ggpht.com/a/AATXAJyXCEtzW9oCxl80Tpp_9a27o5YLCu3wdCoSY_yxs3o=s88-c-k-c0xffffffff-no-rj-mo"
+                    alt=""
+                  />
+                </div>
+                <div class="item-title">
+                  <span>Nerd's Lesson</span>
+                </div>
+              </li>
+              <li>
+                <div class="channel-logo">
+                  <img
+                    src="https://yt3.ggpht.com/a/AATXAJw6_grkg9oR0LjPU5weHdVMOSt5T7kzzocSSDQP1A=s88-c-k-c0xffffffff-no-rj-mo"
+                    alt=""
+                  />
+                </div>
+                <div class="item-title">
+                  <span>TeckMart Influencer</span>
+                </div>
+              </li>
+              <li>
+                <div class="item-icon">
+                  <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </div>
+                <div class="item-title">
+                  <span> Show 12 more</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="more-links small_width_remove">
+            <div class="heading-title">More From YouTube</div>
+            <ul>
+              <li>
+                <div class="item-icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="item-title">
+                  <span>Youtube Premium</span>
+                </div>
+              </li>
+              <li>
+                <div class="item-icon">
+                  <i class="fa fa-gamepad" aria-hidden="true"></i>
+                </div>
+                <div class="item-title">
+                  <span>Gaming</span>
+                </div>
+              </li>
+              <li>
+                <div class="item-icon">
+                  <i class="fa fa-podcast" aria-hidden="true"></i>
+                </div>
+                <div class="item-title">
+                  <span>Live</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="settings-links">
+            <div class="menu__items">
+              <span> <i class="fa fa-cog" aria-hidden="true"></i> </span>
+              <span>Setting</span>
+            </div>
+            <div class="menu__items">
+              <span> <i class="fas fa-flag"></i> </span>
+              <span>Report</span>
+            </div>
+            <div class="menu__items">
+              <span> <i class="fas fa-question-circle"></i></span>
+              <span>Help</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--VIDEO CONTENT -->
+      <div class="main_container">
+        <div class="filter_container">
+          <div>All</div>
+          <div>Mixes</div>
+          <div>Movies</div>
+          <div>Music</div>
+          <div class="remove_small_screen">Website</div>
+          <div class="remove_small_screen">HTML</div>
+          <div class="remove_small_screen">CSS</div>
+          <div class="remove_small_screen">Stock markets</div>
+          <div class="remove_small_screen">UX Design</div>
+          <div class="remove_small_screen">Cartoon</div>
+          <div class="remove_small_screen">Hollywood</div>
+        </div>
+        <div class="video_container"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>
